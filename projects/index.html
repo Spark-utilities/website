@@ -14,8 +14,8 @@
     <meta property="og:image:height" content="512">
     <meta name="theme-color" content="#5865F2">
     
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="icon" type="image/png" href="/assets/images/logo.png">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -25,23 +25,23 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-brand">
-                    <img src="assets/images/logo.png" alt="Spark Utilities" class="nav-logo">
+                    <img src="../assets/images/logo.png" alt="Spark Utilities" class="nav-logo">
                     <span class="nav-title">Spark Utilities</span>
                 </div>
                 <div class="nav-links">
-                    <a href="index.html" class="nav-link">
+                    <a href="../index.html" class="nav-link">
                         <i class="fas fa-home"></i>
                         <span>Home</span>
                     </a>
-                    <a href="projects.html" class="nav-link active">
+                    <a href="index.html" class="nav-link active">
                         <i class="fas fa-code"></i>
                         <span>Projects</span>
                     </a>
-                    <a href="about.html" class="nav-link">
+                    <a href="../about.html" class="nav-link">
                         <i class="fas fa-info-circle"></i>
                         <span>About Us</span>
                     </a>
-                    <a href="team.html" class="nav-link">
+                    <a href="../team.html" class="nav-link">
                         <i class="fas fa-users"></i>
                         <span>Our Team</span>
                     </a>
@@ -52,7 +52,7 @@
         <main class="main-content">
             <div class="content-container">
                 <div class="page-header">
-                    <a href="index.html" class="back-btn">
+                    <a href="../index.html" class="back-btn">
                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                         </svg>
@@ -66,22 +66,28 @@
                 </div>
 
                 
-                <div class="coming-soon">
-                    <div class="coming-soon-card">
-                        <svg class="coming-soon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                        <h2 class="coming-soon-title">Projects Coming Soon</h2>
-                        <p class="coming-soon-description">
-                            We're currently working on some exciting Discord bot projects that will revolutionize how you manage and engage with your Discord communities. Stay tuned for updates!
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <h3 class="project-title">Discord Emoji Extractor</h3>
+                        <p class="project-description">
+                            Extract high-quality emoji images from Discord servers in PNG, JPG, or GIF format. Perfect for downloading custom emojis.
                         </p>
-                        <div class="coming-soon-buttons">
-                            <a href="#" data-discord-link target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                Join Our Discord
+                        <div class="project-tags">
+                            <span class="tag">Discord</span>
+                            <span class="tag">Utility</span>
+                            <span class="tag">Web Tool</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="emojis/" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                Try Tool
                             </a>
-                            <a href="about.html" class="btn btn-outline">
-                                Learn More About Us
+                            <a href="https://github.com/Spark-utilities/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                                <i class="fab fa-github"></i>
+                                Source Code
                             </a>
                         </div>
                     </div>
@@ -97,7 +103,7 @@
                 
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <img src="assets/images/logo.png" alt="Spark Utilities" class="footer-logo-img">
+                        <img src="../assets/images/logo.png" alt="Spark Utilities" class="footer-logo-img">
                         <span class="footer-title">Spark Utilities</span>
                     </div>
                     <p class="footer-description">
@@ -117,10 +123,10 @@
                 <div class="footer-section">
                     <h3 class="footer-heading">Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="index.html">Projects</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../team.html">Our Team</a></li>
                     </ul>
                 </div>
 
@@ -143,7 +149,7 @@
         </div>
     </footer>
 
-    <script src="/assets/js/discordlink.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="../assets/js/discordlink.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>
