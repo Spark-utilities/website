@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Emoji Extractor - Spark Utilities</title>
+    <meta name="description" content="Extract Discord emoji images in PNG, JPG, or GIF format. Get high-quality emoji files from Discord servers.">
+    <meta property="og:title" content="Discord Emoji Extractor - Spark Utilities">
+    <meta property="og:description" content="Extract Discord emoji images in PNG, JPG, or GIF format. Get high-quality emoji files from Discord servers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sparkutils.netlify.app/projects/emojis/">
+    <meta property="og:image" content="https://sparkutils.netlify.app/assets/images/logo.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta name="theme-color" content="#5865F2">
+    
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="icon" type="image/png" href="../../assets/images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <div class="page-content">
+        
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <img src="../../assets/images/logo.png" alt="Spark Utilities" class="nav-logo">
+                    <span class="nav-title">Spark Utilities</span>
+                </div>
+                <div class="nav-links">
+                    <a href="../../index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="../index.html" class="nav-link active">
+                        <i class="fas fa-code"></i>
+                        <span>Projects</span>
+                    </a>
+                    <a href="../../about.html" class="nav-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>About Us</span>
+                    </a>
+                    <a href="../../team.html" class="nav-link">
+                        <i class="fas fa-users"></i>
+                        <span>Our Team</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="content-container">
+                <div class="page-header">
+                    <a href="../index.html" class="back-btn">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                        Back to Projects
+                    </a>
+
+                    <div class="project-hero">
+                        <div class="project-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <h1 class="project-title">Discord Emoji Extractor</h1>
+                        <p class="project-description">
+                            Extract high-quality emoji images from Discord servers in PNG, JPG, or GIF format.
+                        </p>
+                    </div>
+                </div>
+
+                
+                <div class="tool-container">
+                    <form class="extractor-form" onsubmit="event.preventDefault(); getImage(itemId.value)">
+                        <div class="input-section">
+                            <label for="itemId" class="input-label">
+                                <i class="fas fa-hashtag"></i>
+                                Emoji ID
+                            </label>
+                            <input 
+                                type="text" 
+                                required 
+                                class="form-input" 
+                                id="itemId" 
+                                placeholder="Enter the Discord emoji ID (e.g., 123456789012345678)"
+                                aria-label="Emoji ID"
+                            >
+                            <small class="input-help">
+                                Right-click an emoji in Discord and copy its ID from the URL
+                            </small>
+                        </div>
+                        
+                        <div class="format-section">
+                            <h3 class="section-title">
+                                <i class="fas fa-file-image"></i>
+                                File Format
+                            </h3>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="png" name="format" class="radio-input" checked>
+                                    <label class="radio-label" for="png">
+                                        <span class="radio-custom"></span>
+                                        PNG
+                                        <small>Best quality, transparent background</small>
+                                    </label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="jpg" name="format" class="radio-input">
+                                    <label class="radio-label" for="jpg">
+                                        <span class="radio-custom"></span>
+                                        JPG
+                                        <small>Smaller file size, no transparency</small>
+                                    </label>
+                                </div>   
+                                <div class="radio-option">
+                                    <input type="radio" id="gif" name="format" class="radio-input">
+                                    <label class="radio-label" for="gif">
+                                        <span class="radio-custom"></span>
+                                        GIF
+                                        <small>For animated emojis</small>
+                                    </label>
+                                </div> 
+                            </div>
+                        </div>          
+                        
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-download"></i>
+                            Extract Emoji
+                        </button>
+                    </form>
+
+                    
+                    <div class="result-section">
+                        <h3 class="section-title">
+                            <i class="fas fa-image"></i>
+                            Result
+                        </h3>
+                        <div id="result" class="result-container">
+                            <div class="result-placeholder">
+                                <i class="fas fa-search"></i>
+                                <p>Enter an emoji ID and select a format to extract the image</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="instructions-section">
+                        <h3 class="section-title">
+                            <i class="fas fa-question-circle"></i>
+                            How to Use
+                        </h3>
+                        <div class="instructions-grid">
+                            <div class="instruction-card">
+                                <div class="instruction-number">1</div>
+                                <h4>Find an Emoji</h4>
+                                <p>Right-click on any custom emoji in Discord</p>
+                            </div>
+                            <div class="instruction-card">
+                                <div class="instruction-number">2</div>
+                                <h4>Copy ID</h4>
+                                <p>Select "Copy Link" and extract the ID from the URL</p>
+                            </div>
+                            <div class="instruction-card">
+                                <div class="instruction-number">3</div>
+                                <h4>Extract</h4>
+                                <p>Paste the ID, choose format, and click Extract</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="../../assets/images/logo.png" alt="Spark Utilities" class="footer-logo-img">
+                        <span class="footer-title">Spark Utilities</span>
+                    </div>
+                    <p class="footer-description">
+                        A collective of passionate developers primarily focused on creating exceptional Discord experiences.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://github.com/Spark-utilities/" target="_blank" rel="noopener noreferrer" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" data-discord-link target="_blank" rel="noopener noreferrer" class="social-icon">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+
+                
+                <div class="footer-section">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../index.html">Projects</a></li>
+                        <li><a href="../../about.html">About Us</a></li>
+                        <li><a href="../../team.html">Our Team</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-section">
+                    <h3 class="footer-heading">Join Our Community</h3>
+                    <p class="footer-text">
+                        Connect with us on Discord to stay updated on our latest projects and join our community.
+                    </p>
+                    <a href="#" data-discord-link target="_blank" rel="noopener noreferrer" class="footer-discord">
+                        <i class="fab fa-discord"></i>
+                        Join Discord
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Spark Utilities. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/discordlink.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
