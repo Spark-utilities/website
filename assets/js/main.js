@@ -15,12 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
     const animateElements = [
-      { selector: ".hero-title", delay: 300, animation: "slideInUp" },
-      { selector: ".hero-description", delay: 500, animation: "slideInUp" },
-      { selector: ".hero-buttons", delay: 700, animation: "slideInUp" },
+      
+      { selector: ".hero-description", delay: 800, animation: "slideInUp" }, // Increased delay to wait for typing
+      { selector: ".hero-buttons", delay: 1000, animation: "slideInUp" }, // Increased delay
       { selector: ".page-title", delay: 300, animation: "slideInLeft" },
       { selector: ".page-description", delay: 500, animation: "slideInLeft" },
-      { selector: ".feature-card", delay: 400, animation: "slideInUp", stagger: 200 },
+      { selector: ".feature-card", delay: 1200, animation: "slideInUp", stagger: 200 }, // Increased delay
       { selector: ".about-card", delay: 300, animation: "slideInUp", stagger: 150 },
       { selector: ".team-card", delay: 400, animation: "slideInUp", stagger: 200 },
       { selector: ".stat-card", delay: 500, animation: "slideInUp", stagger: 100 },
@@ -210,25 +210,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (heroTitle && heroTitle.textContent.includes("SPARK UTILITIES")) {
     const text = "SPARK UTILITIES"
-    heroTitle.textContent = ""
-    heroTitle.style.borderRight = "3px solid #22c55e"
-
-    let i = 0
-    const typeWriter = () => {
-      if (i < text.length) {
-        heroTitle.textContent += text.charAt(i)
-        i++
-        setTimeout(typeWriter, 100)
-      } else {
-        
-        setTimeout(() => {
-          heroTitle.style.borderRight = "none"
-        }, 1000)
-      }
-    }
 
     
-    setTimeout(typeWriter, 800)
+    heroTitle.style.opacity = "0"
+    heroTitle.textContent = ""
+
+    
+    setTimeout(() => {
+      heroTitle.style.opacity = "1"
+      heroTitle.style.borderRight = "3px solid #22c55e"
+
+      let i = 0
+      const typeWriter = () => {
+        if (i < text.length) {
+          heroTitle.textContent += text.charAt(i)
+          i++
+          setTimeout(typeWriter, 80) // Faster typing speed
+        } else {
+          
+          setTimeout(() => {
+            heroTitle.style.borderRight = "none"
+          }, 500)
+        }
+      }
+
+      typeWriter() // Start immediately
+    }, 400) // Start right after the hero content slides in
   }
 })
 
