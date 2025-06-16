@@ -1,4 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const pageContent = document.querySelector(".page-content")
+
+  if (pageContent) {
+    
+    pageContent.style.opacity = "0"
+    pageContent.style.transform = "translateY(20px)"
+
+    
+    setTimeout(() => {
+      pageContent.style.transition = "opacity 1s ease-out, transform 1s ease-out"
+      pageContent.style.opacity = "1"
+      pageContent.style.transform = "translateY(0)"
+    }, 100)
+  }
+})
+
+
+document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll('a[href^="#"]')
 
   links.forEach((link) => {
