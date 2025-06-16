@@ -13,7 +13,6 @@ body {
   overflow-x: hidden;
 }
 
-
 .page-content {
   position: relative;
   z-index: 10;
@@ -28,7 +27,6 @@ body {
     transform: translateY(0);
   }
 }
-
 
 .navbar {
   border-bottom: 1px solid rgba(71, 85, 105, 0.5);
@@ -126,7 +124,6 @@ body {
   }
 }
 
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -181,11 +178,10 @@ body {
   height: 1.25rem;
 }
 
-
 .hero-section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 5rem 1rem 4rem;
+  padding: 4rem 1rem 3rem;
   text-align: center;
 }
 
@@ -198,8 +194,8 @@ body {
 }
 
 .hero-logo-img {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   margin: 0 auto;
 }
 
@@ -234,7 +230,6 @@ body {
     justify-content: center;
   }
 }
-
 
 .features-grid {
   display: grid;
@@ -280,11 +275,10 @@ body {
   color: #cbd5e1;
 }
 
-
 .main-content {
   max-width: 1024px;
   margin: 0 auto;
-  padding: 4rem 1rem;
+  padding: 3rem 1rem;
 }
 
 .content-container {
@@ -292,7 +286,6 @@ body {
   margin: 0 auto;
   padding: 0 1rem;
 }
-
 
 .page-header {
   margin-bottom: 3rem;
@@ -329,7 +322,6 @@ body {
   color: #cbd5e1;
   line-height: 1.6;
 }
-
 
 .about-sections {
   display: flex;
@@ -388,7 +380,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-
 .join-community {
   text-align: center;
   background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(34, 197, 94, 0.1) 100%);
@@ -409,7 +400,6 @@ body {
   font-size: 1.125rem;
   margin-bottom: 1.5rem;
 }
-
 
 .coming-soon {
   text-align: center;
@@ -460,7 +450,6 @@ body {
   }
 }
 
-
 .newsletter-section {
   margin-top: 4rem;
   background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(34, 197, 94, 0.1) 100%);
@@ -481,7 +470,6 @@ body {
   color: #cbd5e1;
   margin-bottom: 1.5rem;
 }
-
 
 .team-grid {
   display: grid;
@@ -551,7 +539,6 @@ body {
   justify-content: center;
 }
 
-
 .team-tags {
   display: flex;
   flex-wrap: wrap;
@@ -577,7 +564,6 @@ body {
   border-color: #22c55e;
   transform: translateY(-1px);
 }
-
 
 .team-stats {
   margin-top: 4rem;
@@ -610,7 +596,6 @@ body {
 .stat-label {
   color: #cbd5e1;
 }
-
 
 .footer {
   background: #0f172a;
@@ -757,7 +742,6 @@ body {
   color: #64748b;
 }
 
-
 @media (max-width: 768px) {
   .hero-section {
     padding: 3rem 1rem 2rem;
@@ -789,7 +773,6 @@ body {
   }
 }
 
-
 .featured-project {
   margin-bottom: 4rem;
 }
@@ -798,7 +781,7 @@ body {
   background: rgba(30, 41, 59, 0.5);
   border: 1px solid #475569;
   border-radius: 1.5rem;
-  padding: 3rem;
+  padding: 2rem;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -823,13 +806,13 @@ body {
 .project-header {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-bottom: 2rem;
 }
 
 .project-icon-large {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
   border-radius: 1.5rem;
   display: flex;
@@ -849,7 +832,7 @@ body {
 }
 
 .project-title-large {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 0.5rem;
@@ -862,7 +845,7 @@ body {
 }
 
 .project-content {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .project-description-large {
@@ -945,7 +928,6 @@ body {
   }
 }
 
-
 .more-projects {
   margin-top: 3rem;
 }
@@ -989,7 +971,6 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
 
 @media (max-width: 768px) {
   .project-card-large {
