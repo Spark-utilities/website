@@ -97,6 +97,205 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   letter-spacing: -0.01em;
+  position: relative;
+}
+
+
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.particles-container::before,
+.particles-container::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: float-1 20s infinite linear;
+}
+
+.particles-container::before {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.particles-container::after {
+  top: 80%;
+  left: 80%;
+  animation-delay: -10s;
+  background: radial-gradient(circle, var(--color-accent) 0%, transparent 70%);
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.particle-1 {
+  width: 3px;
+  height: 3px;
+  background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%);
+  top: 20%;
+  left: 15%;
+  animation: float-1 25s infinite linear;
+}
+
+.particle-2 {
+  width: 2px;
+  height: 2px;
+  background: radial-gradient(circle, var(--color-accent) 0%, transparent 70%);
+  top: 60%;
+  left: 85%;
+  animation: float-2 30s infinite linear;
+  animation-delay: -5s;
+}
+
+.particle-3 {
+  width: 5px;
+  height: 5px;
+  background: radial-gradient(circle, var(--color-primary-light) 0%, transparent 70%);
+  top: 40%;
+  left: 70%;
+  animation: float-3 35s infinite linear;
+  animation-delay: -15s;
+}
+
+.particle-4 {
+  width: 3px;
+  height: 3px;
+  background: radial-gradient(circle, var(--color-discord) 0%, transparent 70%);
+  top: 75%;
+  left: 25%;
+  animation: float-1 28s infinite linear;
+  animation-delay: -8s;
+}
+
+.particle-5 {
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, var(--color-accent) 0%, transparent 70%);
+  top: 15%;
+  left: 60%;
+  animation: float-2 22s infinite linear;
+  animation-delay: -12s;
+}
+
+.particle-6 {
+  width: 2px;
+  height: 2px;
+  background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%);
+  top: 85%;
+  left: 45%;
+  animation: float-3 32s infinite linear;
+  animation-delay: -18s;
+}
+
+.particle-7 {
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, var(--color-primary-light) 0%, transparent 70%);
+  top: 30%;
+  left: 90%;
+  animation: float-1 26s infinite linear;
+  animation-delay: -3s;
+}
+
+.particle-8 {
+  width: 3px;
+  height: 3px;
+  background: radial-gradient(circle, var(--color-accent-dark) 0%, transparent 70%);
+  top: 55%;
+  left: 5%;
+  animation: float-2 29s infinite linear;
+  animation-delay: -20s;
+}
+
+.particle-9 {
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, var(--color-discord) 0%, transparent 70%);
+  top: 5%;
+  left: 40%;
+  animation: float-3 24s infinite linear;
+  animation-delay: -7s;
+}
+
+.particle-10 {
+  width: 2px;
+  height: 2px;
+  background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%);
+  top: 90%;
+  left: 75%;
+  animation: float-1 31s infinite linear;
+  animation-delay: -14s;
+}
+
+
+@keyframes float-1 {
+  0% {
+    transform: translateY(100vh) translateX(0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100px) translateX(100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes float-2 {
+  0% {
+    transform: translateY(100vh) translateX(0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-100px) translateX(-100px) rotate(-360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes float-3 {
+  0% {
+    transform: translateY(100vh) translateX(0px) rotate(0deg) scale(0.5);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(50vh) translateX(50px) rotate(180deg) scale(1);
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-100px) translateX(-50px) rotate(360deg) scale(0.5);
+    opacity: 0;
+  }
 }
 
 
@@ -1319,6 +1518,21 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+
+  .particles-container,
+  .particle,
+  .particle-1,
+  .particle-2,
+  .particle-3,
+  .particle-4,
+  .particle-5,
+  .particle-6,
+  .particle-7,
+  .particle-8,
+  .particle-9,
+  .particle-10 {
+    display: none !important;
+  }
 }
 
 
@@ -1333,7 +1547,8 @@ body {
 @media print {
   .navbar,
   .footer,
-  .btn {
+  .btn,
+  .particles-container {
     display: none !important;
   }
 
